@@ -58,7 +58,7 @@ fn run() -> Result<(), Error> {
         (about: "Generate prime number that in binary form looks like input image")
         (@arg INPUT:      -i --input     +takes_value +required "Input file name")
         (@arg OUTPUT:     -o --output    +takes_value "Output file name")
-        (@arg ITER:       -n --witnesses +takes_value "Amount of witnesses")
+        (@arg ITER:       -n --witnesses +takes_value "Number of witnesses")
         (@arg SIEVE:      -s --sieve     +takes_value "Sieve upper bound")
         (@arg MAX_WIDTH:  -w --width     +takes_value "Max image width")
         (@arg MAX_HEIGTH: -h --height    +takes_value "Max image height")
