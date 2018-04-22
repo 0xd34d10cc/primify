@@ -84,8 +84,10 @@ fn run() -> Result<(), Error> {
         .unwrap_or(Ok(25))?;
 
     let image = image::open(input)?
-        .grayscale()
-        .resize(width, height, FilterType::Lanczos3);
+        .resize(width, height, FilterType::Lanczos3)
+        .grayscale();
+    let image = image.resize_exact(image.width() * 2, image.height(), FilterType::Lanczos3);
+
     let width  = image.width()  as usize;
     let height = image.height() as usize;
     println!("Result image size is {}x{}", width, height);
